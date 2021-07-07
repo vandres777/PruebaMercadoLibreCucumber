@@ -1,0 +1,126 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-07T02:16:28.825Z",
+        "line": 14,
+        "name": "Busqueda de texto para validar el titulo de la pagina resupesta",
+        "description": "",
+        "id": "buscar-producto-en-mercado-libre;busqueda-de-texto-para-validar-el-titulo-de-la-pagina-resupesta;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3711000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "abro navegador en modo incognito",
+            "match": {
+              "location": "steps.realizarCompra.abro_navegador_en_modo_incognito()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1488000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "me encuentro en la pagina de mercado libre",
+            "match": {
+              "location": "steps.realizarCompra.me_encuentro_en_la_pagina_de_mercado_libre()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3414000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "busco el producto monitor",
+            "match": {
+              "location": "steps.realizarCompra.busco_el_producto_monitor()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3267000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "una vez seleccionado el producto voy a comprarlo como cliente nuevo",
+            "match": {
+              "location": "steps.realizarCompra.una_vez_seleccionado_el_producto_voy_a_comprarlo_como_cliente_nuevo()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1450000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "lleno el formulario e ingreso Andres Leon prueba@gmail.commm prueba123",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Andres",
+                  "offset": 30
+                },
+                {
+                  "val": "Leon",
+                  "offset": 37
+                },
+                {
+                  "val": "prueba@gmail.commm",
+                  "offset": 42
+                },
+                {
+                  "val": "prueba123",
+                  "offset": 61
+                }
+              ],
+              "location": "steps.realizarCompra.lleno_el_formulario_e_ingreso_andres_y_leon(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "acepto terminos y condiciones",
+            "match": {
+              "location": "steps.realizarCompra.acepto_terminos_y_condiciones()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 103000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "hago clic en continuar",
+            "match": {
+              "location": "steps.realizarCompra.hago_clic_en_continuar()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Buscar producto en mercado libre",
+    "description": "",
+    "id": "buscar-producto-en-mercado-libre",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/MercadoLibre.feature",
+    "tags": []
+  }
+]

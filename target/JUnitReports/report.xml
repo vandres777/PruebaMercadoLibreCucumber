@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="13.95">
+<testcase classname="Buscar producto en mercado libre" name="Busqueda de texto para validar el titulo de la pagina resupesta" time="13.668">
+<system-out><![CDATA[Given abro navegador en modo incognito......................................passed
+When me encuentro en la pagina de mercado libre.............................passed
+Then busco el producto monitor..............................................passed
+Then una vez seleccionado el producto voy a comprarlo como cliente nuevo....passed
+And lleno el formulario e ingreso Andres Leon prueba@gmail.commm prueba123..passed
+Then acepto terminos y condiciones..........................................passed
+And hago clic en continuar..................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
