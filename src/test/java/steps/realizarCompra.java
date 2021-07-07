@@ -70,8 +70,9 @@ Thread.sleep(1000);
 	@Then("^hago clic en continuar$")
 	public void hago_clic_en_continuar() {
 		driver.findElement(By.xpath("//span[@class='andes-button__content']")).click();
-		
-		//////
+
+
+		///123
 	}
 
 }
