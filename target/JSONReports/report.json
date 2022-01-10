@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-07-07T02:16:28.825Z",
+        "start_timestamp": "2022-01-10T03:08:16.579Z",
         "line": 14,
         "name": "Busqueda de texto para validar el titulo de la pagina resupesta",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3711000000,
+              "duration": 2972000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,11 +25,11 @@
           },
           {
             "result": {
-              "duration": 1488000000,
+              "duration": 3289000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "me encuentro en la pagina de mercado libre",
+            "name": "me encuentro en la pagina de mercado libre y acepto cookies",
             "match": {
               "location": "steps.realizarCompra.me_encuentro_en_la_pagina_de_mercado_libre()"
             },
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 3414000000,
+              "duration": 5320000000,
               "status": "passed"
             },
             "line": 6,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 3267000000,
+              "duration": 4606000000,
               "status": "passed"
             },
             "line": 7,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 1450000000,
+              "duration": 1412000000,
               "status": "passed"
             },
             "line": 8,
@@ -91,7 +91,7 @@
           },
           {
             "result": {
-              "duration": 88000000,
+              "duration": 59000000,
               "status": "passed"
             },
             "line": 9,
@@ -103,7 +103,7 @@
           },
           {
             "result": {
-              "duration": 103000000,
+              "duration": 1728000000,
               "status": "passed"
             },
             "line": 10,

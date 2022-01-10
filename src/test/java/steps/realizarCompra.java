@@ -1,5 +1,7 @@
 package steps;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,43 +15,43 @@ public class realizarCompra {
 
 	@Given("^abro navegador en modo incognito$")
 	public void abro_navegador_en_modo_incognito() {
-		System.out.println("Navegador se abre");
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--incognito");
 		driver = new ChromeDriver(options);
+		//System.out.println("Navegador se abre en modo incognito");
 
 	}
 
-	@When("^me encuentro en la pagina de mercado libre$")
+	@When("^me encuentro en la pagina de mercado libre y acepto cookies$")
 	public void me_encuentro_en_la_pagina_de_mercado_libre() {
 		driver.manage().window().maximize();
 		driver.navigate().to("https://www.mercadolibre.com.co/");
 		String ActualTitle = driver.getTitle();
-		String ExpectedTitle = "Mercado Libre Colombia";
+		String ExpectedTitle = "Mercado Libre Colombia - Envíos Gratis en el día";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
-		System.out.println("se abre la página");
+		//System.out.println("se abre la página");
 		String title = driver.getTitle();
 		System.out.println("El título de la página es:" + title);
-		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.findElement(By.xpath("(//button[normalize-space()='Entendido'])[1]")).click();
 	}
 
 	@Then("^busco el producto monitor$")
 	public void busco_el_producto_monitor() {
 		driver.findElement(By.name("as_word")).sendKeys("monitor pc 27 pulgadas");
 		driver.findElement(By.xpath("//button/div")).click();
-		driver.findElement(By.partialLinkText("Monitor gamer curvo ViewSonic VX2768-PC-mhd led 27")).click();
+		//driver.findElement(By.partialLinkText("Monitor gamer curvo ViewSonic VX2768-PC-mhd led 27")).click();
+		driver.findElement(By.partialLinkText("Samsung Cf390 Series 27 ''monitor De Escritorio Curvado")).click();
 	}
 
 	@Then("^una vez seleccionado el producto voy a comprarlo como cliente nuevo$")
 	public void una_vez_seleccionado_el_producto_voy_a_comprarlo_como_cliente_nuevo() {
-		driver.findElement(By.xpath(
-				"//button[@class='andes-button andes-button--loud']//span[@class='andes-button__content'][normalize-space()='Comprar ahora']"))
-				.click();
+		driver.findElement(By.xpath("//span[normalize-space()='Comprar ahora']")).click();
+		
+		//driver.findElement(By.xpath("//button[@class='andes-button andes-button--loud']//span[@class='andes-button__content'][normalize-space()='Comprar ahora']")).click();
 		driver.findElement(By.xpath("//a[normalize-space()='Soy nuevo']")).click();
 	}
-
-	
 	
 	@Then("^lleno el formulario e ingreso (.*) (.*) (.*) (.*)$")
 		public void lleno_el_formulario_e_ingreso_andres_y_leon(String firstName, String lastName, String email,String password) throws InterruptedException {
