@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-01-10T03:08:16.579Z",
+        "start_timestamp": "2022-01-12T13:25:52.742Z",
         "line": 14,
         "name": "Busqueda de texto para validar el titulo de la pagina resupesta",
         "description": "",
@@ -13,11 +13,11 @@
         "steps": [
           {
             "result": {
-              "duration": 2972000000,
+              "duration": 2959000000,
               "status": "passed"
             },
             "line": 4,
-            "name": "abro navegador en modo incognito",
+            "name": "Abro navegador en modo incognito",
             "match": {
               "location": "steps.realizarCompra.abro_navegador_en_modo_incognito()"
             },
@@ -25,11 +25,11 @@
           },
           {
             "result": {
-              "duration": 3289000000,
+              "duration": 9474000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "me encuentro en la pagina de mercado libre y acepto cookies",
+            "name": "Me encuentro en la pagina de mercado libre y acepto cookies",
             "match": {
               "location": "steps.realizarCompra.me_encuentro_en_la_pagina_de_mercado_libre()"
             },
@@ -37,11 +37,11 @@
           },
           {
             "result": {
-              "duration": 5320000000,
+              "duration": 3091000000,
               "status": "passed"
             },
             "line": 6,
-            "name": "busco el producto monitor",
+            "name": "Busco el producto monitor",
             "match": {
               "location": "steps.realizarCompra.busco_el_producto_monitor()"
             },
@@ -49,11 +49,11 @@
           },
           {
             "result": {
-              "duration": 4606000000,
+              "duration": 4344000000,
               "status": "passed"
             },
             "line": 7,
-            "name": "una vez seleccionado el producto voy a comprarlo como cliente nuevo",
+            "name": "Una vez seleccionado el producto voy a comprarlo como cliente nuevo",
             "match": {
               "location": "steps.realizarCompra.una_vez_seleccionado_el_producto_voy_a_comprarlo_como_cliente_nuevo()"
             },
@@ -61,11 +61,11 @@
           },
           {
             "result": {
-              "duration": 1412000000,
+              "duration": 945000000,
               "status": "passed"
             },
             "line": 8,
-            "name": "lleno el formulario e ingreso Andres Leon prueba@gmail.commm prueba123",
+            "name": "Lleno el formulario e ingreso Andres Leon prueba@gmail.commm prueba123",
             "match": {
               "arguments": [
                 {
@@ -91,11 +91,11 @@
           },
           {
             "result": {
-              "duration": 59000000,
+              "duration": 170000000,
               "status": "passed"
             },
             "line": 9,
-            "name": "acepto terminos y condiciones",
+            "name": "Acepto terminos y condiciones",
             "match": {
               "location": "steps.realizarCompra.acepto_terminos_y_condiciones()"
             },
@@ -103,11 +103,11 @@
           },
           {
             "result": {
-              "duration": 1728000000,
+              "duration": 1611000000,
               "status": "passed"
             },
             "line": 10,
-            "name": "hago clic en continuar",
+            "name": "Hago clic en continuar",
             "match": {
               "location": "steps.realizarCompra.hago_clic_en_continuar()"
             },
