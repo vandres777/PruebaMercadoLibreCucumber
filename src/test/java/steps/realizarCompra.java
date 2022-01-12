@@ -52,7 +52,7 @@ public class realizarCompra {
 		driver.findElement(By.xpath("//a[normalize-space()='Soy nuevo']")).click();
 	}
 
-	@Then("^Lleno el formulario e ingreso (.*) (.*) (.*) (.*)$")
+	@And("^Lleno el formulario e ingreso (.*) (.*) (.*) (.*)$")
 	public void lleno_el_formulario_e_ingreso_andres_y_leon(String firstName, String lastName, String email,
 			String password) throws InterruptedException {
 
