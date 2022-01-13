@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-01-12T13:34:01.949Z",
+        "start_timestamp": "2022-01-12T13:50:32.891Z",
         "line": 14,
         "name": "Busqueda de texto para validar el titulo de la pagina resupesta",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2994000000,
+              "duration": 2847000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 12144000000,
+              "duration": 2939000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 4515000000,
+              "duration": 4153000000,
               "status": "passed"
             },
             "line": 6,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 4093000000,
+              "duration": 4424000000,
               "status": "passed"
             },
             "line": 7,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 905000000,
+              "duration": 934000000,
               "status": "passed"
             },
             "line": 8,
@@ -91,7 +91,7 @@
           },
           {
             "result": {
-              "duration": 112000000,
+              "duration": 134000000,
               "status": "passed"
             },
             "line": 9,
@@ -103,7 +103,7 @@
           },
           {
             "result": {
-              "duration": 1149000000,
+              "duration": 1492000000,
               "status": "passed"
             },
             "line": 10,
