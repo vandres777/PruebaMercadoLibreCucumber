@@ -3,8 +3,8 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-01-12T13:50:32.891Z",
-        "line": 14,
+        "start_timestamp": "2022-01-22T05:14:35.231Z",
+        "line": 15,
         "name": "Busqueda de texto para validar el titulo de la pagina resupesta",
         "description": "",
         "id": "buscar-producto-en-mercado-libre;busqueda-de-texto-para-validar-el-titulo-de-la-pagina-resupesta;;2",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2847000000,
+              "duration": 4349000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 2939000000,
+              "duration": 4063000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 4153000000,
+              "duration": 3905000000,
               "status": "passed"
             },
             "line": 6,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 4424000000,
+              "duration": 4762000000,
               "status": "passed"
             },
             "line": 7,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 934000000,
+              "duration": 1074000000,
               "status": "passed"
             },
             "line": 8,
@@ -91,7 +91,7 @@
           },
           {
             "result": {
-              "duration": 134000000,
+              "duration": 109000000,
               "status": "passed"
             },
             "line": 9,
@@ -103,10 +103,22 @@
           },
           {
             "result": {
-              "duration": 1492000000,
+              "duration": 10049000000,
               "status": "passed"
             },
             "line": 10,
+            "name": "Valido si aparece captcha",
+            "match": {
+              "location": "steps.realizarCompra.valido_si_aparece_captcha()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1299000000,
+              "status": "passed"
+            },
+            "line": 11,
             "name": "Hago clic en continuar",
             "match": {
               "location": "steps.realizarCompra.hago_clic_en_continuar()"

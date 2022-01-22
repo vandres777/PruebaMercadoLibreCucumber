@@ -7,6 +7,7 @@ Feature: Buscar producto en mercado libre
     Then Una vez seleccionado el producto voy a comprarlo como cliente nuevo
     And Lleno el formulario e ingreso <firstName> <lastName> <email> <password>
     Then Acepto terminos y condiciones
+    And Valido si aparece captcha
     And Hago clic en continuar
 
     Examples: 

@@ -57,8 +57,9 @@ public class realizarCompra {
 			String password) throws InterruptedException {
 
 		// Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.or(ExpectedConditions.visibilityOfElementLocated(By.id("firstName"))));
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName")));
 
 		driver.findElement(By.id("firstName")).sendKeys(firstName);
 		driver.findElement(By.id("lastName")).sendKeys(lastName);
@@ -67,8 +68,18 @@ public class realizarCompra {
 	}
 
 	@Then("Acepto terminos y condiciones")
-	public void acepto_terminos_y_condiciones() {
+	public void acepto_terminos_y_condiciones() throws InterruptedException {
 		driver.findElement(By.xpath("//label[contains(text(),'Acepto los')]")).click();
+	}
+
+	@Then("^Valido si aparece captcha$")
+	public void valido_si_aparece_captcha() {
+
+		if (driver.findElements(By.xpath("//label[@id='recaptcha-anchor-label']")).size() != 0) {
+			System.out.println("Element present");
+		} else
+			System.out.println("Element not present");
+
 	}
 
 	@Then("^Hago clic en continuar$")
