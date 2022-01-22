@@ -32,7 +32,6 @@ public class realizarCompra {
 		String ActualTitle = driver.getTitle();
 		String ExpectedTitle = "Mercado Libre Colombia - Envíos Gratis en el día";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
-		// System.out.println("se abre la página");
 		String title = driver.getTitle();
 		System.out.println("El título de la página es:" + title);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -72,7 +71,7 @@ public class realizarCompra {
 		driver.findElement(By.xpath("//label[contains(text(),'Acepto los')]")).click();
 	}
 
-	@Then("^Valido si aparece captcha$")
+	@And("^Valido si aparece captcha$")
 	public void valido_si_aparece_captcha() {
 
 		if (driver.findElements(By.xpath("//label[@id='recaptcha-anchor-label']")).size() != 0) {
