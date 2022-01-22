@@ -3,127 +3,138 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-01-22T05:14:35.231Z",
-        "line": 15,
-        "name": "Busqueda de texto para validar el titulo de la pagina resupesta",
+        "start_timestamp": "2022-01-22T16:24:57.047Z",
+        "line": 16,
+        "name": "Comprar monitor en mercado libre",
         "description": "",
-        "id": "buscar-producto-en-mercado-libre;busqueda-de-texto-para-validar-el-titulo-de-la-pagina-resupesta;;2",
+        "id": "buscar-producto-en-mercado-libre;comprar-monitor-en-mercado-libre;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4349000000,
+              "duration": 3276000000,
               "status": "passed"
             },
             "line": 4,
             "name": "Abro navegador en modo incognito",
             "match": {
-              "location": "steps.realizarCompra.abro_navegador_en_modo_incognito()"
+              "location": "steps.realizarCompra.Abro_navegador_en_modo_incognito()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 4063000000,
+              "duration": 3002000000,
               "status": "passed"
             },
             "line": 5,
             "name": "Me encuentro en la pagina de mercado libre y acepto cookies",
             "match": {
-              "location": "steps.realizarCompra.me_encuentro_en_la_pagina_de_mercado_libre()"
+              "location": "steps.realizarCompra.Me_encuentro_en_la_pagina_de_mercado_libre()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 3905000000,
+              "duration": 5228000000,
               "status": "passed"
             },
             "line": 6,
             "name": "Busco el producto monitor",
             "match": {
-              "location": "steps.realizarCompra.busco_el_producto_monitor()"
+              "location": "steps.realizarCompra.Busco_el_producto_monitor()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 4762000000,
+              "duration": 5121000000,
               "status": "passed"
             },
             "line": 7,
             "name": "Una vez seleccionado el producto voy a comprarlo como cliente nuevo",
             "match": {
-              "location": "steps.realizarCompra.una_vez_seleccionado_el_producto_voy_a_comprarlo_como_cliente_nuevo()"
+              "location": "steps.realizarCompra.Una_vez_seleccionado_el_producto_voy_a_comprarlo_como_cliente_nuevo()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1074000000,
+              "duration": 1143000000,
               "status": "passed"
             },
             "line": 8,
-            "name": "Lleno el formulario e ingreso Andres Leon prueba@gmail.commm prueba123",
+            "name": "Diligencio el formulario de registro con Andres Leon prueba@gmail.commm prueba123",
             "match": {
               "arguments": [
                 {
                   "val": "Andres",
-                  "offset": 30
+                  "offset": 41
                 },
                 {
                   "val": "Leon",
-                  "offset": 37
+                  "offset": 48
                 },
                 {
                   "val": "prueba@gmail.commm",
-                  "offset": 42
+                  "offset": 53
                 },
                 {
                   "val": "prueba123",
-                  "offset": 61
+                  "offset": 72
                 }
               ],
-              "location": "steps.realizarCompra.lleno_el_formulario_e_ingreso_andres_y_leon(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+              "location": "steps.realizarCompra.Diligencio_el_formulario_de_registro_con_andres_y_leon(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 109000000,
+              "duration": 107000000,
               "status": "passed"
             },
             "line": 9,
             "name": "Acepto terminos y condiciones",
             "match": {
-              "location": "steps.realizarCompra.acepto_terminos_y_condiciones()"
+              "location": "steps.realizarCompra.Acepto_terminos_y_condiciones()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 10049000000,
+              "duration": 10042000000,
               "status": "passed"
             },
             "line": 10,
             "name": "Valido si aparece captcha",
             "match": {
-              "location": "steps.realizarCompra.valido_si_aparece_captcha()"
+              "location": "steps.realizarCompra.Valido_si_aparece_captcha()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1299000000,
+              "duration": 100000000,
               "status": "passed"
             },
             "line": 11,
             "name": "Hago clic en continuar",
             "match": {
-              "location": "steps.realizarCompra.hago_clic_en_continuar()"
+              "location": "steps.realizarCompra.Hago_clic_en_continuar()"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Se visualiza pagina para envio de codigo",
+            "match": {
+              "location": "steps.realizarCompra.Se_visualiza_pagina_para_envio_de_codigo()"
+            },
+            "keyword": "Then "
           }
         ]
       }
