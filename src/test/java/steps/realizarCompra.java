@@ -66,7 +66,7 @@ public class realizarCompra {
 		driver.findElement(By.id("password")).sendKeys(password);
 	}
 
-	@Then("Acepto terminos y condiciones")
+	@Then("^Acepto terminos y condiciones$")
 	public void acepto_terminos_y_condiciones() throws InterruptedException {
 		driver.findElement(By.xpath("//label[contains(text(),'Acepto los')]")).click();
 	}
