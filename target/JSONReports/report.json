@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-01-22T16:24:57.047Z",
+        "start_timestamp": "2022-01-24T00:25:50.363Z",
         "line": 16,
         "name": "Comprar monitor en mercado libre",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3276000000,
+              "duration": 2527000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 3002000000,
+              "duration": 11565000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 5228000000,
+              "duration": 3086000000,
               "status": "passed"
             },
             "line": 6,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 5121000000,
+              "duration": 4641000000,
               "status": "passed"
             },
             "line": 7,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 1143000000,
+              "duration": 1388000000,
               "status": "passed"
             },
             "line": 8,
@@ -91,7 +91,7 @@
           },
           {
             "result": {
-              "duration": 107000000,
+              "duration": 62000000,
               "status": "passed"
             },
             "line": 9,
@@ -103,7 +103,7 @@
           },
           {
             "result": {
-              "duration": 10042000000,
+              "duration": 10077000000,
               "status": "passed"
             },
             "line": 10,
@@ -115,7 +115,7 @@
           },
           {
             "result": {
-              "duration": 100000000,
+              "duration": 1097000000,
               "status": "passed"
             },
             "line": 11,
@@ -127,6 +127,7 @@
           },
           {
             "result": {
+              "duration": 15000000,
               "status": "passed"
             },
             "line": 12,

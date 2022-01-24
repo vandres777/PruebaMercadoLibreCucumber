@@ -56,10 +56,10 @@ public class realizarCompra {
 	public void Diligencio_el_formulario_de_registro_con_andres_y_leon(String firstName, String lastName, String email,
 			String password) throws InterruptedException {
 
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName")));
+		/*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName")));*/
 
 		driver.findElement(By.id("firstName")).sendKeys(firstName);
 		driver.findElement(By.id("lastName")).sendKeys(lastName);
@@ -90,7 +90,11 @@ public class realizarCompra {
 	}
 	@Then("^Se visualiza pagina para envio de codigo$")
 	public void Se_visualiza_pagina_para_envio_de_codigo() {
-
+		String ActualTitle = driver.getTitle();
+		String ExpectedTitle = "Ingresa el código que te enviamos por e-mail";
+		Assert.assertEquals(ExpectedTitle, ActualTitle);
+		String title = driver.getTitle();
+		System.out.println("" + title);
 	}
 
 }

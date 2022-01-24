@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="28.415">
-<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="28.152">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="34.752">
+<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="34.547">
 <system-out><![CDATA[Given Abro navegador en modo incognito......................................passed
 When Me encuentro en la pagina de mercado libre y acepto cookies............passed
 Then Busco el producto monitor..............................................passed
