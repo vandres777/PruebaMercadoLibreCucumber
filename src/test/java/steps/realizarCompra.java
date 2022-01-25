@@ -99,3 +99,5 @@ public class realizarCompra {
 
 }
 
+
+prueba fetch I
