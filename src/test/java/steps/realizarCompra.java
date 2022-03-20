@@ -32,7 +32,7 @@ public class realizarCompra {
 		String ExpectedTitle = "Mercado Libre Colombia - Env�os Gratis en el d�a";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
 		String title = driver.getTitle();
-		System.out.println("El título de la página es:" + title);
+		System.out.println("El tÃ­tulo de la pÃ¡gina es:" + title);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("(//button[normalize-space()='Entendido'])[1]")).click();
 
@@ -93,7 +93,7 @@ public class realizarCompra {
 	@Then("^Se visualiza pagina para envio de codigo$")
 	public void Se_visualiza_pagina_para_envio_de_codigo() {
 		String ActualTitle = driver.getTitle();
-		String ExpectedTitle = "Ingresa el código que te enviamos por e-mail";
+		String ExpectedTitle = "Ingresa el cÃ³digo que te enviamos por e-mail";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
 		String title = driver.getTitle();
 		System.out.println("" + title);
