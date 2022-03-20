@@ -35,7 +35,7 @@ public class realizarCompra {
 		System.out.println("El título de la página es:" + title);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("(//button[normalize-space()='Entendido'])[1]")).click();
-		
+
 	}
 
 	@Then("^Busco el producto monitor$")
@@ -57,8 +57,11 @@ public class realizarCompra {
 
 		Thread.sleep(1000);
 
-		/*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName")));*/
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName")))
+		 * ;
+		 */
 
 		driver.findElement(By.id("firstName")).sendKeys(firstName);
 		driver.findElement(By.id("lastName")).sendKeys(lastName);
@@ -74,7 +77,6 @@ public class realizarCompra {
 	@And("^Valido si aparece captcha$")
 	public void Valido_si_aparece_captcha() {
 
-
 		if (driver.findElements(By.xpath("//*[@id=\"recaptcha-anchor-label\"]/text()")).size() != 0) {
 			System.out.println("recaptcha visible, se debe hacer clic de forma manual");
 		} else
@@ -87,6 +89,7 @@ public class realizarCompra {
 		driver.findElement(By.xpath("//span[@class='andes-button__content']")).click();
 
 	}
+
 	@Then("^Se visualiza pagina para envio de codigo$")
 	public void Se_visualiza_pagina_para_envio_de_codigo() {
 		String ActualTitle = driver.getTitle();
