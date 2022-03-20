@@ -4,11 +4,9 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.Assert;
 
 import io.cucumber.java.en.*;
@@ -34,9 +32,10 @@ public class realizarCompra {
 		String ExpectedTitle = "Mercado Libre Colombia - Envíos Gratis en el día";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
 		String title = driver.getTitle();
-		System.out.println("El título de la página es:" + title);
+		System.out.println("El tÃ­tulo de la pÃ¡gina es:" + title);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("(//button[normalize-space()='Entendido'])[1]")).click();
+
 	}
 
 	@Then("^Busco el producto monitor$")
@@ -49,7 +48,7 @@ public class realizarCompra {
 	@Then("^Una vez seleccionado el producto voy a comprarlo como cliente nuevo$")
 	public void Una_vez_seleccionado_el_producto_voy_a_comprarlo_como_cliente_nuevo() {
 		driver.findElement(By.xpath("//span[normalize-space()='Comprar ahora']")).click();
-		driver.findElement(By.xpath("//a[normalize-space()='Soy nuevo']")).click();
+		driver.findElement(By.xpath("(//span[normalize-space()='Crear cuenta'])[1]")).click();
 	}
 
 	@And("^Diligencio el formulario de registro con (.*) (.*) (.*) (.*)$")
@@ -58,8 +57,11 @@ public class realizarCompra {
 
 		Thread.sleep(1000);
 
-		/*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName")));*/
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName")))
+		 * ;
+		 */
 
 		driver.findElement(By.id("firstName")).sendKeys(firstName);
 		driver.findElement(By.id("lastName")).sendKeys(lastName);
@@ -75,7 +77,6 @@ public class realizarCompra {
 	@And("^Valido si aparece captcha$")
 	public void Valido_si_aparece_captcha() {
 
-
 		if (driver.findElements(By.xpath("//*[@id=\"recaptcha-anchor-label\"]/text()")).size() != 0) {
 			System.out.println("recaptcha visible, se debe hacer clic de forma manual");
 		} else
@@ -88,14 +89,14 @@ public class realizarCompra {
 		driver.findElement(By.xpath("//span[@class='andes-button__content']")).click();
 
 	}
+
 	@Then("^Se visualiza pagina para envio de codigo$")
 	public void Se_visualiza_pagina_para_envio_de_codigo() {
 		String ActualTitle = driver.getTitle();
-		String ExpectedTitle = "Ingresa el código que te enviamos por e-mail";
+		String ExpectedTitle = "Ingresa el cÃ³digo que te enviamos por e-mail";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
 		String title = driver.getTitle();
 		System.out.println("" + title);
 	}
 
 }
-
