@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="34.752">
-<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="34.547">
-<system-out><![CDATA[Given Abro navegador en modo incognito......................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="35.361">
+<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="35.086">
+<failure message="expected [Regístrate en Mercado Libre] but found [Ingresa el cÃ³digo que te enviamos por e-mail]" type="java.lang.AssertionError"><![CDATA[Given Abro navegador en modo incognito......................................passed
 When Me encuentro en la pagina de mercado libre y acepto cookies............passed
 Then Busco el producto monitor..............................................passed
 Then Una vez seleccionado el producto voy a comprarlo como cliente nuevo....passed
@@ -9,7 +9,17 @@ And Diligencio el formulario de registro con Andres Leon prueba@gmail.commm prue
 Then Acepto terminos y condiciones..........................................passed
 And Valido si aparece captcha...............................................passed
 And Hago clic en continuar..................................................passed
-Then Se visualiza pagina para envio de codigo...............................passed
-]]></system-out>
+Then Se visualiza pagina para envio de codigo...............................failed
+
+StackTrace:
+java.lang.AssertionError: expected [Regístrate en Mercado Libre] but found [Ingresa el cÃ³digo que te enviamos por e-mail]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at steps.realizarCompra.Se_visualiza_pagina_para_envio_de_codigo(realizarCompra.java:94)
+	at ✽.Se visualiza pagina para envio de codigo(file:///C:/Users/VANDR/eclipse-workspace/PruebaMercadoLibreCucumber/src/test/resources/features/MercadoLibre.feature:12)
+]]></failure>
 </testcase>
 </testsuite>
