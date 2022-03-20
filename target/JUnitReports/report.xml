@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="35.361">
-<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="35.086">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.755">
+<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="33.517">
 <failure message="expected [Regístrate en Mercado Libre] but found [Ingresa el cÃ³digo que te enviamos por e-mail]" type="java.lang.AssertionError"><![CDATA[Given Abro navegador en modo incognito......................................passed
 When Me encuentro en la pagina de mercado libre y acepto cookies............passed
 Then Busco el producto monitor..............................................passed
@@ -18,7 +18,7 @@ java.lang.AssertionError: expected [Regístrate en Mercado Libre] but found [Ing
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:575)
 	at org.testng.Assert.assertEquals(Assert.java:585)
-	at steps.realizarCompra.Se_visualiza_pagina_para_envio_de_codigo(realizarCompra.java:94)
+	at steps.realizarCompra.Se_visualiza_pagina_para_envio_de_codigo(realizarCompra.java:97)
 	at ✽.Se visualiza pagina para envio de codigo(file:///C:/Users/VANDR/eclipse-workspace/PruebaMercadoLibreCucumber/src/test/resources/features/MercadoLibre.feature:12)
 ]]></failure>
 </testcase>

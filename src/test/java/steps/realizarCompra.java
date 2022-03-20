@@ -1,12 +1,15 @@
 package steps;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.cucumber.java.en.*;
@@ -32,7 +35,7 @@ public class realizarCompra {
 		String ExpectedTitle = "Mercado Libre Colombia - Env�os Gratis en el d�a";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
 		String title = driver.getTitle();
-		System.out.println("El tÃ­tulo de la pÃ¡gina es:" + title);
+		System.out.println("El título de la página es:" + title);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("(//button[normalize-space()='Entendido'])[1]")).click();
 
@@ -57,11 +60,8 @@ public class realizarCompra {
 
 		Thread.sleep(1000);
 
-		/*
-		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName")))
-		 * ;
-		 */
+		/*WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"ui-form__actions\"]")));*/
 
 		driver.findElement(By.id("firstName")).sendKeys(firstName);
 		driver.findElement(By.id("lastName")).sendKeys(lastName);
@@ -86,14 +86,14 @@ public class realizarCompra {
 
 	@Then("^Hago clic en continuar$")
 	public void Hago_clic_en_continuar() {
-		driver.findElement(By.xpath("//span[@class='andes-button__content']")).click();
+		driver.findElement(By.xpath("(//span[@class='andes-button__content'])[1]")).click();
 
 	}
 
 	@Then("^Se visualiza pagina para envio de codigo$")
 	public void Se_visualiza_pagina_para_envio_de_codigo() {
 		String ActualTitle = driver.getTitle();
-		String ExpectedTitle = "Ingresa el cÃ³digo que te enviamos por e-mail";
+		String ExpectedTitle = "Ingresa el código que te enviamos por e-mail";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
 		String title = driver.getTitle();
 		System.out.println("" + title);

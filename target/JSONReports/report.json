@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-03-20T03:22:39.680Z",
+        "start_timestamp": "2022-03-20T05:29:06.366Z",
         "line": 16,
         "name": "Comprar monitor en mercado libre",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3678000000,
+              "duration": 3071000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 12356000000,
+              "duration": 10331000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 3210000000,
+              "duration": 3792000000,
               "status": "passed"
             },
             "line": 6,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 3840000000,
+              "duration": 4265000000,
               "status": "passed"
             },
             "line": 7,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 1678000000,
+              "duration": 1685000000,
               "status": "passed"
             },
             "line": 8,
@@ -91,7 +91,7 @@
           },
           {
             "result": {
-              "duration": 94000000,
+              "duration": 97000000,
               "status": "passed"
             },
             "line": 9,
@@ -103,7 +103,7 @@
           },
           {
             "result": {
-              "duration": 10031000000,
+              "duration": 10067000000,
               "status": "passed"
             },
             "line": 10,
@@ -115,7 +115,7 @@
           },
           {
             "result": {
-              "duration": 75000000,
+              "duration": 78000000,
               "status": "passed"
             },
             "line": 11,
@@ -127,8 +127,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected [Regístrate en Mercado Libre] but found [Ingresa el cÃ³digo que te enviamos por e-mail]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:575)\r\n\tat org.testng.Assert.assertEquals(Assert.java:585)\r\n\tat steps.realizarCompra.Se_visualiza_pagina_para_envio_de_codigo(realizarCompra.java:94)\r\n\tat ✽.Se visualiza pagina para envio de codigo(file:///C:/Users/VANDR/eclipse-workspace/PruebaMercadoLibreCucumber/src/test/resources/features/MercadoLibre.feature:12)\r\n",
-              "duration": 13000000,
+              "error_message": "java.lang.AssertionError: expected [Regístrate en Mercado Libre] but found [Ingresa el cÃ³digo que te enviamos por e-mail]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:575)\r\n\tat org.testng.Assert.assertEquals(Assert.java:585)\r\n\tat steps.realizarCompra.Se_visualiza_pagina_para_envio_de_codigo(realizarCompra.java:97)\r\n\tat ✽.Se visualiza pagina para envio de codigo(file:///C:/Users/VANDR/eclipse-workspace/PruebaMercadoLibreCucumber/src/test/resources/features/MercadoLibre.feature:12)\r\n",
+              "duration": 16000000,
               "status": "failed"
             },
             "line": 12,
