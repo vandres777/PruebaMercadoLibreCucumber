@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.755">
-<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="33.517">
-<failure message="expected [Regístrate en Mercado Libre] but found [Ingresa el cÃ³digo que te enviamos por e-mail]" type="java.lang.AssertionError"><![CDATA[Given Abro navegador en modo incognito......................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="29.864">
+<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="29.316">
+<failure message="expected [Ingresa el código que te enviamos por e-mail] but found [Ingresa el cÃ³digo que te enviamos por e-mail]" type="java.lang.AssertionError"><![CDATA[Given Abro navegador en modo incognito......................................passed
 When Me encuentro en la pagina de mercado libre y acepto cookies............passed
 Then Busco el producto monitor..............................................passed
 Then Una vez seleccionado el producto voy a comprarlo como cliente nuevo....passed
@@ -12,7 +12,7 @@ And Hago clic en continuar..................................................pass
 Then Se visualiza pagina para envio de codigo...............................failed
 
 StackTrace:
-java.lang.AssertionError: expected [Regístrate en Mercado Libre] but found [Ingresa el cÃ³digo que te enviamos por e-mail]
+java.lang.AssertionError: expected [Ingresa el código que te enviamos por e-mail] but found [Ingresa el cÃ³digo que te enviamos por e-mail]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 	at org.testng.Assert.assertEquals(Assert.java:118)
