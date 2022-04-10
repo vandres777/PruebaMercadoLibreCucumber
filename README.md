@@ -1,6 +1,6 @@
 # Compra en Mercado Libre!:robot::alien::video_game:
 
-- Selecci[on basica de un objeto en pagina mercado libre
+- Selección básica de un objeto en página Mercado Libre
 - Uso de Cucumber
 - TestNG
 - Lenguaje java
