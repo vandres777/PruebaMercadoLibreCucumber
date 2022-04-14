@@ -101,7 +101,3 @@ public class realizarCompra {
 
 }
 
-////123456
-///git pull1234
-//12345679123456789
-///git stash save 
