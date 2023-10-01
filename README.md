@@ -2,5 +2,5 @@
 
 - Selección básica de un objeto en página Mercado Libre
 - Uso de Cucumber
-- TestNG
+- Junit
 - Lenguaje java

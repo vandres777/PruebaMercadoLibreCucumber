@@ -1,104 +1,91 @@
 package steps;
 
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
+import org.junit.Assert;
 import io.cucumber.java.en.*;
 
 public class realizarCompra {
-	WebDriver driver;
+    WebDriver driver;
 
-	@Given("^Abro navegador en modo incognito$")
-	public void Abro_navegador_en_modo_incognito() {
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--incognito");
-		driver = new ChromeDriver(options);
-		// System.out.println("Navegador se abre en modo incognito");
+    @Before
+    @Given("^Abro navegador en modo incognito$")
+    public void Abro_navegador_en_modo_incognito() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        System.out.println("Navegador se abre en modo incógnito");
 
-	}
+    }
 
-	@When("^Me encuentro en la pagina de mercado libre y acepto cookies$")
-	public void Me_encuentro_en_la_pagina_de_mercado_libre() {
-		driver.manage().window().maximize();
-		driver.navigate().to("https://www.mercadolibre.com.co/");
-		String ActualTitle = driver.getTitle();
-		String ExpectedTitle = "Mercado Libre Colombia - Envíos Gratis en el día";
-		Assert.assertEquals(ExpectedTitle, ActualTitle);
-		String title = driver.getTitle();
-		System.out.println("El tÃ­tulo de la pÃ¡gina es:" + title);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.findElement(By.xpath("(//button[normalize-space()='Entendido'])[1]")).click();
+    @When("^Me encuentro en la página de Mercado Libre y acepto cookies$")
+    public void me_encuentro_en_la_pagina_de_mercado_libre_y_acepto_cookies() {
+        driver.navigate().to("https://www.mercadolibre.com.co/");
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Mercado Libre Colombia - Envíos Gratis en el día";
+        Assert.assertEquals(expectedTitle, actualTitle);
+        System.out.println("El título de la página es: " + actualTitle);
+        WebElement acceptCookiesButton = driver.findElement(By.xpath("//button[normalize-space()='Aceptar cookies']"));
+        acceptCookiesButton.click();
+    }
 
-	}
+    @Then("^Busco el producto monitor$")
+    public void busco_el_producto_monitor() {
+        driver.findElement(By.name("as_word")).sendKeys("monitor pc 27 pulgadas");
+        WebElement searchButton = driver.findElement(By.xpath("//button/div"));
+        searchButton.click();
+        WebElement laterButton = driver.findElement(By.xpath("//span[normalize-space()='Más tarde']"));
+        laterButton.click();
+        WebElement monitorLink = driver.findElement(By.xpath("//a[contains(@title,'Monitor Curvo Fhd 1800r Con Diseño Sin Bordes En 3 Lados Color Black 100V/240V')]/h2[@class='ui-search-item__title shops__item-title'][contains(text(),'27')]"));
+        monitorLink.click();
+    }
 
-	@Then("^Busco el producto monitor$")
-	public void Busco_el_producto_monitor() {
-		driver.findElement(By.name("as_word")).sendKeys("monitor pc 27 pulgadas");
-		driver.findElement(By.xpath("//button/div")).click();
-		driver.findElement(By.partialLinkText("Samsung Cf390 Series 27 ''monitor De Escritorio Curvado")).click();
-	}
+    @Then("^Una vez seleccionado el producto voy a comprarlo como cliente nuevo$")
+    public void una_vez_seleccionado_el_producto_voy_a_comprarlo_como_cliente_nuevo() {
+        WebElement buyNowButton = driver.findElement(By.xpath("//span[normalize-space()='Comprar ahora']"));
+        buyNowButton.click();
+        driver.navigate().refresh();
+        WebElement createAccountButton = driver.findElement(By.xpath("//span[normalize-space()='Crear cuenta']"));
+        createAccountButton.click();
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.navigate().refresh();
+        WebElement createPersonalAccountButton = driver.findElement(By.xpath("//span[normalize-space()='Crear cuenta personal']"));
+        createPersonalAccountButton.click();
+    }
 
-	@Then("^Una vez seleccionado el producto voy a comprarlo como cliente nuevo$")
-	public void Una_vez_seleccionado_el_producto_voy_a_comprarlo_como_cliente_nuevo() {
-		driver.findElement(By.xpath("//span[normalize-space()='Comprar ahora']")).click();
-		driver.findElement(By.xpath("(//span[normalize-space()='Crear cuenta'])[1]")).click();
-	}
+    @And("^Diligencio el formulario de registro con (.*) (.*) (.*) (.*)$")
+    public void diligencio_el_formulario_de_registro_con(String firstName, String lastName, String email, String password) {
+        driver.navigate().refresh();
+        /*WebElement acceptCookiesButton = driver.findElement(By.xpath("//button[normalize-space()='Aceptar cookies']"));
+        acceptCookiesButton.click();*/
+        //driver.findElement(By.xpath("//span[@class=\"andes-button__text\"]")).click();
 
-	@And("^Diligencio el formulario de registro con (.*) (.*) (.*) (.*)$")
-	public void Diligencio_el_formulario_de_registro_con_andres_y_leon(String firstName, String lastName, String email,
-			String password) throws InterruptedException {
+        WebElement agregarButton = driver.findElement(By.xpath("//span[@class=\"andes-button__text\"]"));
+        agregarButton.click();
+        WebElement emailInput = driver.findElement(By.name("email"));
+        emailInput.sendKeys(email);
+        WebElement policiesCheckbox = driver.findElement(By.xpath("//input[@id='policies']"));
+        policiesCheckbox.click();
+        WebElement continueButton = driver.findElement(By.xpath("//span[@class='andes-button__content']"));
+        continueButton.click();
 
-		Thread.sleep(1000);
+    }
 
-		/*WebDriverWait wait = new WebDriverWait(driver, 15);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"ui-form__actions\"]")));*/
+    @Then("se cierra el navegador automaticamente")
+    public void se_cierra_el_navegador_automaticamente() {
 
-		driver.findElement(By.id("firstName")).sendKeys(firstName);
-		driver.findElement(By.id("lastName")).sendKeys(lastName);
-		driver.findElement(By.id("email")).sendKeys(email);
-		driver.findElement(By.id("password")).sendKeys(password);
-	}
-
-	@Then("^Acepto terminos y condiciones$")
-	public void Acepto_terminos_y_condiciones() throws InterruptedException {
-		driver.findElement(By.xpath("//label[contains(text(),'Acepto los')]")).click();
-	}
-
-	@And("^Valido si aparece captcha$")
-	public void Valido_si_aparece_captcha() {
-
-		if (driver.findElements(By.xpath("//*[@id=\"recaptcha-anchor-label\"]/text()")).size() != 0) {
-			System.out.println("recaptcha visible, se debe hacer clic de forma manual");
-		} else
-			System.out.println("recaptcha no visible, flujo continua");
-
-	}
-
-	@Then("^Hago clic en continuar$")
-	public void Hago_clic_en_continuar() {
-		driver.findElement(By.xpath("(//span[@class='andes-button__content'])[1]")).click();
-
-	}
-
-	@Then("^Se visualiza pagina para envio de codigo$")
-	public void Se_visualiza_pagina_para_envio_de_codigo() {
-		String ActualTitle = driver.getTitle();
-		String ExpectedTitle = "Ingresa el cÃ³digo que te enviamos por e-mail";
-		Assert.assertEquals(ExpectedTitle, ActualTitle);
-		String title = driver.getTitle();
-		System.out.println("" + title);
-	}
-
+        driver.close();
+        /*if (driver != null) {
+            driver.quit();
+        }*/
+    }
 }
-
-///corregir mensaje 
