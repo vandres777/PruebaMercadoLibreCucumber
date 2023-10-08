@@ -1,6 +1,5 @@
 package steps;
 
-import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import org.junit.Assert;
 import io.cucumber.java.en.*;
+
+import java.util.concurrent.TimeUnit;
 
 public class realizarCompra {
     WebDriver driver;
@@ -45,7 +46,7 @@ public class realizarCompra {
         searchButton.click();
         WebElement laterButton = driver.findElement(By.xpath("//span[normalize-space()='Más tarde']"));
         laterButton.click();
-        WebElement monitorLink = driver.findElement(By.xpath("//a[contains(@title,'Monitor Curvo Fhd 1800r Con Diseño Sin Bordes En 3 Lados Color Black 100V/240V')]/h2[@class='ui-search-item__title shops__item-title'][contains(text(),'27')]"));
+WebElement monitorLink = driver.findElement(By.xpath("(//h2[@class='ui-search-item__title'][contains(text(),'27')])[1]"));
         monitorLink.click();
     }
 
@@ -65,12 +66,9 @@ public class realizarCompra {
     @And("^Diligencio el formulario de registro con (.*) (.*) (.*) (.*)$")
     public void diligencio_el_formulario_de_registro_con(String firstName, String lastName, String email, String password) {
         driver.navigate().refresh();
-        /*WebElement acceptCookiesButton = driver.findElement(By.xpath("//button[normalize-space()='Aceptar cookies']"));
-        acceptCookiesButton.click();*/
-        //driver.findElement(By.xpath("//span[@class=\"andes-button__text\"]")).click();
-
         WebElement agregarButton = driver.findElement(By.xpath("//span[@class=\"andes-button__text\"]"));
         agregarButton.click();
+        driver.navigate().refresh();
         WebElement emailInput = driver.findElement(By.name("email"));
         emailInput.sendKeys(email);
         WebElement policiesCheckbox = driver.findElement(By.xpath("//input[@id='policies']"));
@@ -82,7 +80,7 @@ public class realizarCompra {
 
     @Then("se cierra el navegador automaticamente")
     public void se_cierra_el_navegador_automaticamente() {
-
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.close();
         /*if (driver != null) {
             driver.quit();

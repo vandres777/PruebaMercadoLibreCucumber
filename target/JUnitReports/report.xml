@@ -1,36 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="14.2">
-    <testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre" time="14">
-        <failure message="element click intercepted: Element &lt;span class=&quot;andes-button__content&quot;&gt;...&lt;/span&gt; is not clickable at point (960, 477). Other element would receive the click: &lt;form novalidate=&quot;&quot;&gt;...&lt;/form&gt;&#10;  (Session info: chrome=117.0.5938.132)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-JML9HNE8', ip: '192.168.1.64', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\VANDR\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60372}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 534e441f668bb3d169954c307a4d9832" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given Abro navegador en modo incognito......................................passed
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="16.467" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Buscar producto en mercado libre" name="Comprar monitor en mercado libre - Example #1.1" time="16.11">
+<system-out><![CDATA[
+Given Abro navegador en modo incognito......................................passed
 When Me encuentro en la página de Mercado Libre y acepto cookies............passed
 Then Busco el producto monitor..............................................passed
 Then Una vez seleccionado el producto voy a comprarlo como cliente nuevo....passed
-And Diligencio el formulario de registro con Andres Leon pruebass2@gmail.comm prueba123.failed
-Then se cierra el navegador automaticamente.................................skipped
-
-StackTrace:
-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="andes-button__content">...</span> is not clickable at point (960, 477). Other element would receive the click: <form novalidate="">...</form>
-  (Session info: chrome=117.0.5938.132)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-JML9HNE8', ip: '192.168.1.64', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\VANDR\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60372}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 534e441f668bb3d169954c307a4d9832
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at steps.realizarCompra.diligencio_el_formulario_de_registro_con(realizarCompra.java:79)
-	at ✽.Diligencio el formulario de registro con Andres Leon pruebass2@gmail.comm prueba123(file:///C:/Users/VANDR/eclipse-workspace/PruebaMercadoLibreCucumber/src/test/resources/features/MercadoLibre.feature:8)
-]]></failure>
-    </testcase>
+And Diligencio el formulario de registro con Andres Leon pruebass2@gmail.comm prueba123.passed
+Then se cierra el navegador automaticamente.................................passed
+]]></system-out>
+</testcase>
 </testsuite>
